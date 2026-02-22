@@ -175,11 +175,12 @@ steering = Kp * error + Kd * (error - prev_error) / dt
 
 ```
 .
-├── lane_detection/
-├── traffic_light/
-├── obstacle_detection/
-├── main.py
-├── requirements.txt
+├── main.py                # Orchestrates everything
+├── lane_detection.py      # All lane-related vision + PD error input
+├── traffic_light.py       # Traffic light HSV logic
+├── obstacle_detection.py  # LiDAR + red object logic
+├── config.py              # All constants in one place
+└── requirements.txt
 ```
 
 ---
